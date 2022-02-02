@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add a New Item</h1>
+        <form (ngSubmit)="createNewFood(newFood)">
+            <label for="img">Image</label><br>
+            <input [(ngModel)]="newFood.img" id="img" type="text" name="img" required><br>
+            <label for="altText">Alter Text</label><br>
+            <input [(ngModel)]="newFood.altText" id="altText" type="text" name="altText" required><br>
+            <label for="card_title">Title</label><br>
+            <input [(ngModel)]="newFood.card_title" id="card_title" type="text" name="card_title" required><br>
+            <label for="time">Time</label><br>
+            <input [(ngModel)]="newFood.time" id="time" type="text" name="time" required><br>
+            <label for="recipe">Recipe</label><br>
+            <input [(ngModel)]="newFood.recipe" id="recipe" type="text" name="recipe" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

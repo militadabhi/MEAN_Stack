@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <h1>Food List</h1>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div *ngFor="let food of foods">
+                <div class="col">
+                    <div class="card"><img class="card-img-top" src="/assets/{{food.img}}" alt="{{food.altText}}" />
+                        <div class="card-body">
+                            <h5 class="card-title">{{food.card_title}}</h5>
+                            <p class="card-text">{{food.time}}</p>
+                            <p class="card-text">{{food.recipe}}</p>
+                            <a routerLink="/foods/{{food._id}}">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="addnew"><a routerLink="create">Add new item</a></p>
+</body>
+
+</html>
